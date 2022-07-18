@@ -7,7 +7,7 @@
         <li><%= link_to "Help", help_path %></li>
 
         <% if logged_in? %>
-          <li><%= link_to "Users", '#' %></li>
+          <li><%= link_to "Users", users_path %></li>
           <li class="dropdown">
             <%= link_to "#", class: 'nav-link px-2 dropdown-toggle ', data: { "bs-toggle": 'dropdown' } do %>
               Account <b class="caret"></b>
@@ -18,7 +18,7 @@
                 <%= link_to "Profile", current_user, class: 'dropdown-item' %>
               </li>
               <li>
-                <%= link_to "Settings", '#', class: 'dropdown-item' %>
+                <%= link_to "Settings", edit_user_path(current_user), class: 'dropdown-item' %>
               </li>
               <li class="divider"></li>
               <li>

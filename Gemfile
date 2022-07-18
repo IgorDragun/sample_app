@@ -20,10 +20,26 @@ gem "bcrypt", "~> 3.1.7"
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
 
-
-#!!!!!!!!!!!!!!!!!!!
 gem "bootstrap-sass"
 
+# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
+
+# Use Sass to process CSS
+gem "sass-rails"
+
+# # Build JSON APIs with ease [https://github.com/rails/jbuilder]
+gem "jbuilder"
+
+gem "turbolinks"
+
+# Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
+gem "turbo-rails"
+
+gem "faker"
+
+gem "will_paginate"
+gem "bootstrap-will_paginate"
 
 
 group :development, :test do
@@ -64,17 +80,7 @@ group :production do
   gem "pg"
 end
 
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 
-# Use Sass to process CSS
-gem "sass-rails"
-#
-#
-# # Build JSON APIs with ease [https://github.com/rails/jbuilder]
-gem "jbuilder"
-
-gem "turbolinks"
 
 # gem "webpacker"
 #
@@ -82,9 +88,6 @@ gem "turbolinks"
 
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 # gem "importmap-rails"
-
-# Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
-gem "turbo-rails"
 
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
 # gem "stimulus-rails"
